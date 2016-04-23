@@ -43,6 +43,9 @@ group :development, :test do
   gem 'mini_backtrace'
   gem 'guard'
   gem 'guard-minitest'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'factory_girl_rails'
 end
 
 group :development do
