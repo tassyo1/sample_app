@@ -7,7 +7,8 @@ require 'spec_helper'
 require 'rspec/rails'
 require "shoulda/matchers"
 require "factory_girl"
-
+require "capybara/rspec"
+require "pry-rails"
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
@@ -38,6 +39,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  #
+  config.include Capybara::DSL
 end
 
 #Shoulda Matchers configuration
